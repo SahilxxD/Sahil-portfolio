@@ -10,6 +10,7 @@ import { MdEmail, MdSubject } from "react-icons/md";
 import { SiMinutemailer } from "react-icons/si";
 import emailjs from "@emailjs/browser";
 import { cn } from "@/lib/utils";
+import { env } from "process";
 export default function ContactSection() {
     const formRef = useRef<HTMLFormElement>(null!)
     const btnRef = useRef<HTMLButtonElement>(null!)
@@ -18,10 +19,10 @@ export default function ContactSection() {
     const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
         emailjs.sendForm(
-            "service_btwdl9d",
-            "template_5gtxeir",
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
             formRef.current!,
-            "M1wkHNQ4jCOzYhhu2"
+            process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
         )
             .then(
                 (result) => {
@@ -34,6 +35,7 @@ export default function ContactSection() {
                     }, 4000);
                 },
                 (error) => {
+                    console.log("message not sent");
                     console.log(error.text);
                 }
             )
