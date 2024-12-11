@@ -24,7 +24,7 @@ export default function About() {
 
                     <div className="2xl:hidden space-y-4">
                         <Gallery />
-                        <Eduction />
+                       
                     </div>
 
                 </div>
@@ -39,9 +39,9 @@ export default function About() {
                         <Experience />
 
                     </div>
-                    <div className="hidden 2xl:space-y-4 2xl:flex 2xl:flex-col">
+                    <div className="hidden 2xl:space-y-4 2xl:flex">
                         <Gallery />
-                        <Eduction />
+                        
                     </div>
                     <div className="space-y-4">
 
