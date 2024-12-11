@@ -5,6 +5,8 @@ import About from "@/sections/about/about";
 import ContactSection from "@/sections/contact/contact";
 import Featured from "@/sections/featured/featured";
 import LandingSection from "@/sections/landing";
+import { Cursor } from "@/components/cursor/cursor";
+import { useEffect, useState } from "react";
 
 const WaterWaveWrapper = dynamic(
   () => import("@/components/visualEffects/water-wave-wrapper"),
@@ -13,11 +15,29 @@ const WaterWaveWrapper = dynamic(
 
 export default function Home() {
   // Check if the device is mobile
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Determine if the device is mobile on the client side
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Set initial value and add resize event listener
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
-      <div className={isMobile ? "hide-cursor" : ""}>
+      <div >
+        {
+          !isMobile ? (
+            <Cursor color="#fff" />
+          ) : null
+        }
+
         {/* Conditionally render the WaterWaveWrapper or static content */}
         {isMobile ? (
           <div className="relative">
