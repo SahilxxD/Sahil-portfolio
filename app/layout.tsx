@@ -23,13 +23,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
   return (
     <html lang="en">
       <body
-        className={cn(MainFont.className, OswaldFont.variable, PixelFont.variable, isMobile && "hide-cursor")}
+        className={cn(MainFont.className, OswaldFont.variable, PixelFont.variable)}
       >
-        {!isMobile && <Cursor color="#fff" />}
         <GrainEffect />
         {children}
       </body>
