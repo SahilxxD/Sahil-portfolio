@@ -5,7 +5,7 @@ export default function Background() {
     return (
         <Card className="md:h-full" title="My Background">
             <div>
-                <p className="leading-[160%] font-normal text-white/[0.4] text-[16px]">
+                <p className="leading-[160%] font-normal text-white/[0.4] text-[1.4vh] lg:text-[1.8vh]">
                     Originating from a humble beginning in a &nbsp;
                     <span className="text-white underline"> Mumbai, a bustling city in India </span> ,
                     I’ve been fortunate to call this vibrant metropolis my home, cherishing the countless opportunities and experiences it has offered along the way.<br />
