@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(MainFont.className, OswaldFont.variable, PixelFont.variable)}
+        className={cn(MainFont.className, OswaldFont.variable, PixelFont.variable, isMobile && "hide-cursor")}
       >
         {!isMobile && <Cursor color="#fff" />}
         <GrainEffect />
