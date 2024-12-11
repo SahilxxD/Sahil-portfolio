@@ -39,7 +39,7 @@ export default function SvgCurve() {
   const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 
   const animateOut = () => {
-    let newProgress = progress * Math.sin(time);
+    const newProgress = progress * Math.sin(time);
 
     setPath(newProgress);
 

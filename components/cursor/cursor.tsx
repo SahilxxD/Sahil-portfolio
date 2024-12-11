@@ -1,6 +1,6 @@
 
 "use client";
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 interface CursorProps {

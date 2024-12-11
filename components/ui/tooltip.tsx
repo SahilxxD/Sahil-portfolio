@@ -2,8 +2,6 @@ import { cn } from "@/lib/utils";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { FC, useState } from "react";
 import Image from "next/image";
-import { div } from "framer-motion/client";
-
 interface TooltipProps {
     title: string;
     bgColor?: string

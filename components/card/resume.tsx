@@ -9,10 +9,10 @@ export default function Resume() {
     return (
         <Card className="md:h-full 2xl:h-full">
             <p className="text-lg xl:text-xl font-medium text-primary-foreground">
-                Motivated Gen AI Developer and Full-Stack Developer. Armed with around 1 year of experience of tinkering in full-stack playground. I've got a toolbox
-                that's overflowing with front-end sparkles and back-end muscle. Add a dash of AI cleverness and a lock-tight dedication to web security, and
-                you've got a recipe for online awesomeness. Ready for little
-                internnet enchantment? Let's make your web dreams a screen reality!
+                Motivated Gen AI Developer and Full-Stack Developer. Armed with around 1 year of experience of tinkering in full-stack playground. I&aposve got a toolbox
+                that&&apos; overflowing with front-end sparkles and back-end muscle. Add a dash of AI cleverness and a lock-tight dedication to web security, and
+                you&aposve got a recipe for online awesomeness. Ready for little
+                internnet enchantment? Let&&apos; make your web dreams a screen reality!
                 {/* Proficient in JavaScript, Python, Node.js, React, Spring Boot, MySQL,
                 and MongoDB, with a strong focus on developing RESTful APIs, optimizing web applications for performance and security, and implementing microservices architectures.
                 Experienced in Agile methodologies and cross-functional collaboration. Recently designed a Retrieval-Augmented Generation (RAG) AI model for PDF Q&A using Ollama,
