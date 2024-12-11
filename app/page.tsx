@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="">
+      <div className={isMobile ? "hide-cursor" : ""}>
         {/* Conditionally render the WaterWaveWrapper or static content */}
         {isMobile ? (
           <div className="relative">
