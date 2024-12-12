@@ -40,7 +40,7 @@ export default function Home() {
 
         {/* Conditionally render the WaterWaveWrapper or static content */}
         {isMobile ? (
-          <div className="relative">
+          <div className="relative pb-8">
             <WaterWaveWrapper
               imageUrl=""
               dropRadius="3"
@@ -59,13 +59,13 @@ export default function Home() {
           </div>
         ) : (
           <WaterWaveWrapper
-            imageUrl="relative"
+            imageUrl=""
             dropRadius="3"
             perturbance="3"
             resolution="2048"
           >
             {() => (
-              <div className="relative">
+              <div className="relative pb-8">
                 <LandingSection />
                 <Featured />
                 <About />
