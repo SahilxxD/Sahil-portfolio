@@ -54,6 +54,8 @@ export default function Home() {
               )}
             </WaterWaveWrapper>
             <Featured />
+            <About />
+            <ContactSection />
           </div>
         ) : (
           <WaterWaveWrapper
@@ -66,47 +68,12 @@ export default function Home() {
               <div className="relative">
                 <LandingSection />
                 <Featured />
-              </div>
-            )}
-          </WaterWaveWrapper>
-        )}
-
-        {isMobile ? (
-          <div className="">
-            <About />
-          </div>
-        ) : (
-          <WaterWaveWrapper
-            imageUrl="relative"
-            dropRadius="3"
-            perturbance="3"
-            resolution="2048"
-          >
-            {() => (
-              <div className="relative">
                 <About />
-              </div>
-            )}
-          </WaterWaveWrapper>
-        )}
-
-        {isMobile ? (
-          <div className="pb-8">
-            <ContactSection />
-          </div>
-        ) : (
-          <WaterWaveWrapper
-            imageUrl="relative"
-            dropRadius="3"
-            perturbance="3"
-            resolution="2048"
-          >
-            {() => (
-              <div className="relative pb-8">
                 <ContactSection />
               </div>
             )}
           </WaterWaveWrapper>
+
         )}
       </div>
     </>
